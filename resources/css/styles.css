@@ -1,0 +1,310 @@
+p {
+  text-align: center;
+  font-size: clamp(.9rem, 2vw, 5rem);
+}
+
+img {
+  max-width: 100%;
+}
+
+        /*HEADER BANNER*/
+header {
+  display: flex;
+  align-items: center;
+  background-color: #770C15;
+  margin: 1em 0;
+}
+
+.nav-bar {
+  /**outline: 2px solid red;**/
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 0;
+}
+
+.club-name h1 {
+  margin-top: 1rem;
+  font-size: clamp(.5rem, 9vw, 5rem);
+  font-weight: bold;
+  line-height: 1;
+  font-weight: 900;
+  color: #770C15;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: clamp(.6rem, 3vw, 2rem); 
+  letter-spacing: .5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #300812;
+  margin-bottom: .5rem;
+}
+
+/*INFO TEXT AREA*/
+.info-text {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  color: #F7F7F8;
+  background-color: #770C15;
+  font-size: clamp(.9rem, 10vw, 12rem);
+  padding: 2vw;
+  margin: 1rem 0;
+}
+
+h2 {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #FCF0F2;
+}
+
+        /*IMAGES CONTAINER*/
+h3 {
+  font-size: 1.7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Helvetica', sans-serif;
+  color: #98153E;
+}
+
+.secondary-images {
+  margin: 1rem 0;
+}
+
+.text-2 h3{
+  color: #FCF0F2;
+}
+.text-2 {
+  margin-top: 1rem;
+  background-color: #770C15;
+  color: #F7F7F8;
+  padding: 1rem;
+}
+
+        /*GET FIT BANNER*/
+.banner {
+  color: #F7F7F8;
+  background-color: #770C15;
+  padding: 3vw;
+  margin: 1rem 0;
+}
+
+.banner h2 {
+  text-align: center;
+  color: #FCF0F2;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: 1.5rem;
+  margin: .5rem 0;
+}
+
+.button-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  background: #FCF0F2;
+  color: #770C15;
+  border: 0;
+  font-size: 1.5rem;
+  padding: .6rem 1rem;
+  border-radius: 1.8rem;
+  margin: .5em 0;
+}
+
+/*ABOUT US SECTION*/
+.about-section h3 {
+  color: #FCF0F2;
+}
+
+.about-text { 
+  background-color: #770C15;
+  color: #F7F7F8;
+  padding: 1rem;
+}
+
+/*FOOTER*/
+footer p {
+  background-color: #770C15;
+  color: #F7F7F8;
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+/*MEDIA QUERY TO LARGER SCREEN*/
+@media (min-width: 800px) {
+  body{
+    margin: 0;
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 
+      minmax(1em, 1fr)
+      repeat(4, minmax(10rem, 30rem))
+      minmax(1em, 1fr);
+    gap: 1em;
+  }
+
+  header{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  main {
+    grid-column: 1/-1;
+    grid-row: 2/9;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-auto-flow: dense;
+  }
+
+  .club-name {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: start;
+  }
+
+  .subtitle {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: start;
+  }
+
+  .header-img {
+    grid-column: 2/6;
+    grid-row: 1/3;
+    justify-self: stretch;
+  }
+
+  .info-text {
+    grid-column: 1/6;
+    grid-row: 3/4;
+  }
+
+  .banner {
+    grid-column: 1/6;
+    grid-row: 7/8;
+  }
+
+  footer {
+    grid-column: 1/-1;
+    grid-row: 9/10;
+  }
+  
+  .secondary-images {
+    grid-column: 1/6;
+    grid-row: 4/7;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-auto-flow: dense;
+    row-gap: 2rem;
+    margin-top: 1.5rem;
+    margin: 1.5rem 3rem;
+  }
+
+  .image-1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    max-width: 80%;
+  }
+  .text-1{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    margin: 4rem;
+  }
+
+  .image-2 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+    max-width: 80%;
+  }
+  .text-2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 4rem;
+    align-self: center;
+    justify-self: center;
+    color: #300812;
+    background-color: #F7F7F8;
+    padding: 0;
+  }
+
+  .text-2 h3{
+    color: #770C15;
+  }
+
+  .image-3 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: center;
+    justify-self: center;
+    max-width: 80%;
+  }
+
+  .text-3 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    margin: 4rem;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .about-section {
+    grid-column: 1/6;
+    grid-row: 8/9;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    background-color: #F7F7F8;
+    color: #300812;
+    grid-auto-flow: dense;
+    row-gap: 2rem;
+    margin-top: 1.5rem;
+    margin: 1.5rem 3rem;
+  } 
+  
+  .about-section h3 {
+    color: #770C15;
+  }
+
+  .about-text {
+    grid-column: 1/2;
+    padding: 0;
+    margin: 4rem;
+    align-self: center;
+    justify-self: center;
+    background-color: #F7F7F8;
+    color: #300812;
+  }
+
+  .about-image {
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: center;
+    max-width: 80%;
+  }
+
+}
+
+
+
